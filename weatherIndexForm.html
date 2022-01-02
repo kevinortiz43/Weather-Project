@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <title>Weather website form</title>  
+<link rel="stylesheet" href="./weatherstyle.css"/>
+<Head>
+    <div class= "navbar">
+        <a href="./weatherHomePage.html">Home</a>
+        <a href="./weatherIndexCity.html">City searcher</a>
+        <a href="./weatherIndexZip.html">Zip searcher</a>
+        <a href="./weatherIndexForm.html">Contact Us</a>
+    </div>
+</Head>
+<body>
+
+<p>Enter some text in the fields below, then press the "Submit form" button to submit the form.</p>
+
+<form id="myForm">
+  First name: <input type="text" name="fname">
+  Last name: <input type="text" name="lname">
+  <input type="button" onclick="myFunction()" value="Submit form">
+</form>
+
+<h4 id="response"></h4>
+
+<script>
+function myFunction() {
+  document.getElementById("myForm").submit();
+}
+</script>
+
+</body>
+</html>
