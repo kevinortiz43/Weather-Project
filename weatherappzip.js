@@ -16,7 +16,7 @@ const unit = "imperial";
 const APIkey = "a4a45650e5f60155d63b1c8b9d1efb59#";
 // authentication to access website, this will remain constant
   
-    zipButton.addEventListener("click", ()=> {
+    zipButton.addEventListener("click",() => {
     let userInput2 = userInputZip.value;
     const url2 = `https://api.openweathermap.org/data/2.5/weather?zip=${userInput2}&units=${unit}&appid=${APIkey}`;
     // user input zipcode second option instead of cities.      
@@ -32,7 +32,7 @@ const APIkey = "a4a45650e5f60155d63b1c8b9d1efb59#";
         displayHumidityZip.innerText = `Humidity: ${dataZip.main.humidity}%`;
         displayWindSpeedZip.innerText = `Windspeed: ${Math.round(dataZip.wind.speed)} mile(s)/hour`;
         const imageURL2 = `http://openweathermap.org/img/wn/${dataZip.weather[0].icon}@2x.png`;
-        displayIconZip.innerHTML = `<img src=${imageURL2}>`;
+        displayIconZip.innerHTML = `<img src= ${imageURL2}>`;
         displayweatherdescriptionZip.innerText = `Current weather: ${dataZip.weather[0].description}`;
       })
       .catch((error) => { 

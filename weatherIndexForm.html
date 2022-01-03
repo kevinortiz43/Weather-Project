@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html>
-    <title>Weather website form</title>  
-<link rel="stylesheet" href="./weatherstyle.css"/>
-<Head>
-<div class= "navbar">
-    <a href="./index.html">Home</a>
-    <a href="./weatherIndexCity.html">City searcher</a>
-    <a href="./weatherIndexZip.html">Zip code searcher</a>
-    <a href="./weatherIndexForm.html">Contact Us</a>
+<head>
+<meta name = "viewport" content = "width= device-width, initial-scale= 1">
+<link rel = "stylesheet" href = "./weatherstyle.css" />
+</style>
+</head>
+<div class =  "navbar">
+  <a href = "./index.html"> Home</a>
+  <a href = "./weatherIndexCity.html">City searcher</a>
+  <a href = "./weatherIndexZip.html">Zip code searcher</a>
+  <a href = "./weatherIndexForm.html">Contact Us</a>
 </div>
-</Head>
 <body>
 
-<p>Enter some text in the fields below, then press the "Submit form" button to submit the form.</p>
+<h3>Contact Form</h3>
 
-<form id="myForm">
-  First name: <input type="text" name="fname">
-  Last name: <input type="text" name="lname">
-  <input type="button" onclick="myFunction()" value="Submit form">
-</form>
+<div class = "container">
+  <form>
+    <label for = "fname">First Name</label>
+    <input type = "text" id = "fname" name = "firstname" placeholder = "Your name..">
 
-<h4 id="response"></h4>
+    <label for = "lname">Last Name</label>
+    <input type = "text" id = "lname" name = "lastname" placeholder = "Your last name..">
 
-<script>
-function myFunction() {
-  document.getElementById("myForm").submit();
-}
-</script>
+    <label fo r= "subject">Subject</label>
+    <textarea id = "subject" name = "subject" placeholder = "Write something.."></textarea>
+
+    <input type = "submit" value = "Submit">
+  </form>
+</div>
 
 </body>
 </html>
