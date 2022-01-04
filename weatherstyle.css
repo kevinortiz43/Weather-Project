@@ -71,7 +71,7 @@ input[type="submit"]:hover {
   display: grid;
   justify-content: center;
   padding-top: 5%;
-  grid-template-columns: repeat(3, 250px);
+  grid-template-columns: repeat(4, 250px);
 }
 
   @media (max-width: 800px) {
