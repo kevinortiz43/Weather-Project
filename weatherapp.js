@@ -33,21 +33,21 @@ cityButton.addEventListener("click", () => {
       // display city names
       displayCountryName.innerText = `Country name: ${data.sys.country}`;
      // display country name
-      displayFeelsLike.innerText = ` Feels like temperature ${Math.round(data.main.feels_like)} degrees Fahrenheit`;
+      displayFeelsLike.innerText = ` Feels like temperature ${Math.round(data.main.feels_like)} degree(s) Fahrenheit`;
       // display current feels like temperature in Fahrenheit
-      displayTemperature.innerText = `Current Temperature ${Math.round(data.main.temp)} degrees Fahrenheit`;
+      displayTemperature.innerText = `Current Temperature ${Math.round(data.main.temp)} degree(s) Fahrenheit`;
      // display current tempearture in Fahrenheit
-      displaymin.innerText = `Min temperature for today: ${Math.round(data.main.temp_min)} degrees Fahrenheit`;
+      displaymin.innerText = `Min temperature for today: ${Math.round(data.main.temp_min)} degree(s) Fahrenheit`;
       // display current minimum temperature in Fahrenheit
-      displaymax.innerText = `Max temperature for today: ${Math.round(data.main.temp_max)} degrees Fahrenheit`;
+      displaymax.innerText = `Max temperature for today: ${Math.round(data.main.temp_max)} degree(s) Fahrenheit`;
       // displays current maximum temperature in Fahrenheit
-      displayFeelsLikeCelsius.innerText = ` Feels like temperature ${Math.round((((data.main.feels_like)-32)*5)/9)} degrees Celsius`;
+      displayFeelsLikeCelsius.innerText = ` Feels like temperature ${Math.round((((data.main.feels_like)-32)*5)/9)} degree(s) Celsius`;
       // displays feels like temperature in Celsius
-      displayTemperatureCelsius.innerText = `Current Temperature ${Math.round((((data.main.temp)-32)*5)/9)} degrees Celsius`;
+      displayTemperatureCelsius.innerText = `Current Temperature ${Math.round((((data.main.temp)-32)*5)/9)} degree(s) Celsius`;
      // displays temperature in Celsius
-      displayminCelsius.innerText = `Min temperature for today: ${Math.round((((data.main.temp_min)-32)*5)/9)} degrees Celsius`;
+      displayminCelsius.innerText = `Min temperature for today: ${Math.round((((data.main.temp_min)-32)*5)/9)} degree(s) Celsius`;
       // displays minimum temperature in Celsius
-      displaymaxCelsius.innerText = `Max temperature for today: ${Math.round((((data.main.temp_max)-32)*5)/9)} degrees Celsius`;
+      displaymaxCelsius.innerText = `Max temperature for today: ${Math.round((((data.main.temp_max)-32)*5)/9)} degree(s) Celsius`;
       // displays maximum temperature in Celsius
       displayHumidity.innerText = `Humidity: ${data.main.humidity}%`;
       // displays humidity percentage
