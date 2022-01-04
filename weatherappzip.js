@@ -61,7 +61,7 @@ const APIkey = "a4a45650e5f60155d63b1c8b9d1efb59#";
       })
        // displays weather description (rain, sleet, snow)
       .catch((error) => { 
-        displayError.innerText = `Error, input a US zip code`
+        console.log(error);
             // In case there is an error
       })  
     })

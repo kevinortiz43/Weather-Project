@@ -62,9 +62,11 @@ cityButton.addEventListener("click", () => {
       // displays weather description (rain, sleet, snow)
     })
     .catch((error) => { 
-      displayError.innerText = `Error please input a city name `
-      console.log(error)
+      console.log(error);
     // In case there is an error
     })  
   })
-  
+   
+  // fix media queries 
+  // add a box around
+  // fix error
