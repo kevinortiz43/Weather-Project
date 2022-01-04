@@ -15,7 +15,8 @@ const displayweatherdescription =  document.getElementById("displayweatherdescri
 const displayIcon =  document.getElementById("displayIcon");
 const displayError =  document.getElementById("displayErrorMessage")
 const cityButton=  document.getElementById("cityButton")
-const unit =  "imperial";
+
+const unit = "imperial";
 // metrics for Fahrenheit, this will remain constant
 const APIkey =  "a4a45650e5f60155d63b1c8b9d1efb59#";
 // authentication to access website, this will remain constant
@@ -23,26 +24,26 @@ const APIkey =  "a4a45650e5f60155d63b1c8b9d1efb59#";
 cityButton.addEventListener("click", () => {
 // callback function for fetch
   let userInput=  userInputCity.value;
-  const url1 =  `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&units=${unit}&appid=${APIkey}`;
+  const url =  `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&units=${unit}&appid=${APIkey}`;
 // endpoint with parameter to get city when user searches it
-    fetch(url1)
+    fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      displayCityName.innerText =  ` City name: ${data.name}`;
-      displayCountryName.innerText =  `Country name: ${data.sys.country}`;
-      displayFeelsLike.innerText =  ` Feels like temperature ${Math.round(data.main.feels_like)} degrees Fahrenheit`;
-      displayTemperature.innerText =  `Current Temperature ${Math.round(data.main.temp)} degrees Fahrenheit`;
-      displaymin.innerText =  `Min temperature for today: ${Math.round(data.main.temp_min)} degrees Fahrenheit`;
-      displaymax.innerText =  `Max temperature for today: ${Math.round(data.main.temp_max)} degrees Fahrenheit`;
-      displayFeelsLikeCelsius.innerText =  ` Feels like temperature ${Math.round((((data.main.feels_like)-32)*5)/9)} degrees Celsius`;
-      displayTemperatureCelsius.innerText =  `Current Temperature ${Math.round((((data.main.temp)-32)*5)/9)} degrees Celsius`;
-      displayminCelsius.innerText =  `Min temperature for today: ${Math.round((((data.main.temp_min)-32)*5)/9)} degrees Celsius`;
-      displaymaxCelsius.innerText =  `Max temperature for today: ${Math.round((((data.main.temp_max)-32)*5)/9)} degrees Celsius`;
-      displayHumidity.innerText =  `Humidity: ${data.main.humidity}%`;
-      displayWindSpeed.innerText =  `Windspeed: ${Math.round(data.wind.speed)} mile(s)/hour`;
-      const imageURL =  `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-      displayIcon.innerHTML =  `<img src= ${imageURL}>`;
-      displayweatherdescription.innerText =  `Current weather description: ${data.weather[0].description}`;
+      displayCityName.innerText = ` City name: ${data.name}`;
+      displayCountryName.innerText = `Country name: ${data.sys.country}`;
+      displayFeelsLike.innerText = ` Feels like temperature ${Math.round(data.main.feels_like)} degrees Fahrenheit`;
+      displayTemperature.innerText = `Current Temperature ${Math.round(data.main.temp)} degrees Fahrenheit`;
+      displaymin.innerText = `Min temperature for today: ${Math.round(data.main.temp_min)} degrees Fahrenheit`;
+      displaymax.innerText = `Max temperature for today: ${Math.round(data.main.temp_max)} degrees Fahrenheit`;
+      displayFeelsLikeCelsius.innerText = ` Feels like temperature ${Math.round((((data.main.feels_like)-32)*5)/9)} degrees Celsius`;
+      displayTemperatureCelsius.innerText = `Current Temperature ${Math.round((((data.main.temp)-32)*5)/9)} degrees Celsius`;
+      displayminCelsius.innerText = `Min temperature for today: ${Math.round((((data.main.temp_min)-32)*5)/9)} degrees Celsius`;
+      displaymaxCelsius.innerText = `Max temperature for today: ${Math.round((((data.main.temp_max)-32)*5)/9)} degrees Celsius`;
+      displayHumidity.innerText = `Humidity: ${data.main.humidity}%`;
+      displayWindSpeed.innerText = `Windspeed: ${Math.round(data.wind.speed)} mile(s)/hour`;
+      const imageURL = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+      displayIcon.innerHTML = `<img src=${imageURL}>`;
+      displayweatherdescription.innerText = `Current weather description: ${data.weather[0].description}`;
     })
     .catch((error) => { 
       displayError.innerText = `Error please input a city name`

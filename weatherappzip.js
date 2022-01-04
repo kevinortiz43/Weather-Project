@@ -1,20 +1,20 @@
-const userInputCity =  document.getElementById("userInputCity")
+const userInputZip =  document.getElementById("userInputZip")
 const displayCityName =  document.getElementById("displayCityName");
 const displayCountryName =  document.getElementById("displayCountryName");
 const displayFeelsLike =  document.getElementById("displayFeelsLike");
 const displayTemperature =  document.getElementById("displayTemperature");
-const displaymin =  document.getElementById("displaymin");
-const displaymax =  document.getElementById("displaymax");
-const displayFeelsLikeCelsius =  document.getElementById("displayFeelsLikeCelsius");
-const displayTemperatureCelsius =  document.getElementById("displayTemperatureCelsius");
-const displayminCelsius =  document.getElementById("displayminCelsius");
-const displaymaxCelsius =  document.getElementById("displaymaxCelsius");
-const displayHumidity =  document.getElementById("displayHumidity");
-const displayWindSpeed =  document.getElementById("windSpeed");
-const displayweatherdescription =  document.getElementById("displayweatherdescription");
-const displayIcon =  document.getElementById("displayIcon");
-const displayError =  document.getElementById("displayErrorMessage")
-const cityButton=  document.getElementById("cityButton")
+const displaymin = document.getElementById("displaymin");
+const displaymax = document.getElementById("displaymax");
+const displayFeelsLikeCelsius = document.getElementById("displayFeelsLikeCelsius");
+const displayTemperatureCelsius = document.getElementById("displayTemperatureCelsius");
+const displayminCelsius = document.getElementById("displayminCelsius");
+const displaymaxCelsius = document.getElementById("displaymaxCelsius");
+const displayHumidity = document.getElementById("displayHumidity");
+const displayWindSpeed = document.getElementById("windSpeed");
+const displayweatherdescription = document.getElementById("displayweatherdescription");
+const displayIcon = document.getElementById("displayIcon");
+const displayError = document.getElementById("displayErrorMessage")
+const cityButton =  document.getElementById("cityButton")
 const unit = "imperial";
 // metrics for Fahrenheit, this will remain constant
 const APIkey = "a4a45650e5f60155d63b1c8b9d1efb59#";
@@ -22,9 +22,9 @@ const APIkey = "a4a45650e5f60155d63b1c8b9d1efb59#";
   
     zipButton.addEventListener("click",() => {
     let userInput1 = userInputZip.value;
-    const url2 = `https://api.openweathermap.org/data/2.5/weather?zip=${userInput1}&units=${unit}&appid=${APIkey}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?zip=${userInput1}&units=${unit}&appid=${APIkey}`;
     // user input zipcode second option instead of cities.      
-    fetch(url2)
+    fetch(url)
       .then((response) => response.json())
       .then((data) => {
         displayCityName.innerText =  ` City name: ${data.name}`;
