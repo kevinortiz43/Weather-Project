@@ -1,22 +1,13 @@
 body {
   background-image: url("./images/weather-background.jpg");
-}
-/* @media only screen and (max-width:750) {
- body {
-  grid-template-columns: auto;
-  grid-template-rows: max-content;
-  
-}
-} */
 
-body {
   font-family: Arial, Helvetica, sans-serif;
 }
 * {
   box-sizing: border-box;
 }
 
-input[type= "text"],
+input[type="text"],
 select,
 textarea {
   width: 100%;
@@ -29,7 +20,7 @@ textarea {
   resize: vertical;
 }
 
-input[type= "submit"] {
+input[type="submit"] {
   background-color: #04aa6d;
   color: white;
   padding: 12px 20px;
@@ -38,7 +29,7 @@ input[type= "submit"] {
   cursor: pointer;
 }
 
-input[type= "submit"]:hover {
+input[type="submit"]:hover {
   background-color: #45a049;
 }
 
@@ -53,30 +44,58 @@ input[type= "submit"]:hover {
 }
 
 #userInputZip {
-  width: 150px;
+  width: 250px;
 }
 
 #subject {
   height: 200px;
 }
 
-@media (max-width: 800px) {
-  /* all screen selection */
-  h3 {
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 1518px;
+  margin-left: -07px;
+  margin-top: -10px;
+  font-size: 20px;
+  /* drop down? hover 
+ and give m the options? */
+}
+
+.searchBar {
+  display: flex;
+  padding-top: 5%;
+  justify-content: center;
+}
+
+.displayContainer {
+  display: grid;
+  justify-content: center;
+  padding-top: 5%;
+  grid-template-columns: repeat(3, 250px);
+}
+
+
+  @media (max-width: 800px) {
+    h1 {
+      font-size: large;
+    }
+    .displayContainer {
+      grid-template-columns: repeat(2, 200px);
+    }
+    h3 {
+      font-size: small;
+      background-color: lightskyblue;
+    }
+  }
+
+@media (max-width: 1200px) {
+  .navbar {
+    display: grid;
     font-size: small;
-  }
-}
-
-@media (max-width: 800px) {
-  /* all screen selection */
-  h1 {
+    grid-template-rows: auto;
+    justify-content: flex-start;
     font-size: large;
-  }
-}
-
-@media (max-width: 800px) {
-  /* all screen selection */
-  h3 {
-    font-size: medium;
   }
 }

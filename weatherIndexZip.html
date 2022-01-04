@@ -7,28 +7,36 @@
     <title>Weather zip website</title>
     <link rel = "stylesheet" href = "./weatherstyle.css" />
 </head>
+
 <div class =  "navbar">
     <a href = "./index.html">Home</a>
     <a href = "./weatherIndexCity.html">City searcher</a>
     <a href = "./weatherIndexZip.html">Zip code searcher</a>
     <a href = "./weatherIndexForm.html">Contact Us</a>
 </div>
-<body>
-    <label for = "zipInput">Zip input:</label>
-    <input id =  "userInputZip"  placeholder =  "Put zipcode in here...">
-    <button id = "zipButton">Submit</button> 
 
-   <h3 id = "displayErrorMessageZip"></h3> 
-   <h3 id = "displayCityNameZip"></h3> 
-   <h3 id = "displayCountryNameZip"></h3> 
-   <h3 id = "displayTemperatureZip"></h3>  
-   <h3 id = "displayFeelsLikeZip"></h3> 
-   <h3 id = "displayminZip"></h3> 
-   <h3 id = "displaymaxZip"></h3>   
-   <h3 id = "displayHumidityZip"></h3> 
-   <h3 id = "windSpeedZip"></h3> 
-   <h3 id = "displayIconZip"></h3>  
+<body>
+
+    <div class="searchBar">
+    <label for = "zipInput">U.S. zipcode input: </label>
+    <input id =  "userInputZip" placeholder ="Put zipcode in here...">
+    <button id = "zipButton">Submit</button> 
+    </div>
+
+    <div class = "displayContainer">
+    <h3 id = "displayCityNameZip"></h3> 
+    <h3 id = "displayCountryNameZip"></h3> 
+    <h3 id = "displayTemperatureZip"></h3>  
+    <h3 id = "displayFeelsLikeZip"></h3> 
+    <h3 id = "displayminZip"></h3> 
+    <h3 id = "displaymaxZip"></h3>   
+    <h3 id = "displayHumidityZip"></h3> 
+    <h3 id = "displayIconZip"></h3>  
+    <h3 id = "windSpeedZip"></h3> 
+    <h3 id = "displayErrorMessageZip"></h3> 
    <h3 id = "displayweatherdescriptionZip"></h3> 
+    </div>
+
     
    <script src =  "./weatherappzip.js"></script>
 </form>
