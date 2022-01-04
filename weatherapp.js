@@ -21,7 +21,7 @@ const APIkey =  "a4a45650e5f60155d63b1c8b9d1efb59#";
 // authentication to access website, this will remain constant
 
 cityButton.addEventListener("click", () => {
-// call back function this code won't run until citybutton is clicked
+// call back function, the fetch won't run until submit button for city is clicked.
   let userInput =  userInputCity.value;
   // user decides what city they want and this will dynamically update our parameters
   const url =  `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&units=${unit}&appid=${APIkey}`;

@@ -21,6 +21,7 @@ const APIkey = "a4a45650e5f60155d63b1c8b9d1efb59#";
 // authentication to access website, this will remain constant
   
     zipButton.addEventListener("click",() => {
+    // call back function, the fetch won't run until submit button for zipcode is clicked.
     let userInput1 = userInputZip.value;
     const url = `https://api.openweathermap.org/data/2.5/weather?zip=${userInput1}&units=${unit}&appid=${APIkey}`;
     // user input zipcode second option instead of cities.      
