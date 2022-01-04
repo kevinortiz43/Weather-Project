@@ -67,6 +67,5 @@ cityButton.addEventListener("click", () => {
     })  
   })
    
-  // fix media queries 
   // add a box around
-  // fix error
+  
