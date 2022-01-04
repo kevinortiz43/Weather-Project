@@ -59,8 +59,6 @@ input[type="submit"]:hover {
   margin-left: -07px;
   margin-top: -10px;
   font-size: 20px;
-  /* drop down? hover 
- and give m the options? */
 }
 
 .searchBar {
@@ -76,21 +74,21 @@ input[type="submit"]:hover {
   grid-template-columns: repeat(3, 250px);
 }
 
-
   @media (max-width: 800px) {
     h1 {
       font-size: large;
     }
+
     .displayContainer {
       grid-template-columns: repeat(2, 200px);
     }
+
     h3 {
       font-size: small;
-      background-color: lightskyblue;
     }
   }
 
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
   .navbar {
     display: grid;
     font-size: small;
