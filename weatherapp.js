@@ -29,10 +29,6 @@ cityButton.addEventListener("click", () => {
     fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      displayCityName.innerText = ` City name: ${data.name}`;
-      // display city names
-      displayCountryName.innerText = `Country name: ${data.sys.country}`;
-     // display country name
       displayFeelsLike.innerText = ` Feels like temperature ${Math.round(data.main.feels_like)} degree(s) Fahrenheit `;
       // display current feels like temperature in Fahrenheit
       displayTemperature.innerText = `Current Temperature ${Math.round(data.main.temp)} degree(s) Fahrenheit `;
@@ -66,6 +62,4 @@ cityButton.addEventListener("click", () => {
     // In case there is an error
     })  
   })
-   
-  // add a box around
-  
+ 
