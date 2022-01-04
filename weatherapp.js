@@ -15,7 +15,6 @@ const displayweatherdescription =  document.getElementById("displayweatherdescri
 const displayIcon =  document.getElementById("displayIcon");
 const displayError =  document.getElementById("displayErrorMessage")
 const cityButton=  document.getElementById("cityButton")
-
 const unit = "imperial";
 // metrics for Fahrenheit, this will remain constant
 const APIkey =  "a4a45650e5f60155d63b1c8b9d1efb59#";
